@@ -12,32 +12,22 @@
     "react-router-dom": "^6.21.1",
     "react-scripts": "^5.0.1"
   },
-
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
 
   "scripts": {
-    "start":     "react-scripts start",
-    "build":     "react-scripts build",
-    "test":      "react-scripts test",
-    "eject":     "react-scripts eject",
-
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
 
     "predeploy": "npm run build",
-    "deploy":    "gh-pages -d build -b gh-pages-r https://github.com/DhanasaiBontu/MAIL-CRAFT.git"
+    "deploy": "gh-pages -d build -b gh-pages -r https://github.com/DhanasaiBontu/MAIL-CRAFT.git"
   },
 
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }
