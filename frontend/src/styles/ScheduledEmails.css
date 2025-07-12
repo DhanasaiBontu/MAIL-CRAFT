@@ -1,0 +1,25 @@
+.scheduled-container {
+  padding: 20px;
+}
+
+.scheduled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.scheduled-table th,
+.scheduled-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.scheduled-table th {
+  background-color: #f9f9f9;
+}
+
+.pending {
+  color: orange;
+  font-weight: bold;
+}

@@ -1,0 +1,62 @@
+/* ──────────────────────────────────────────────────────────────
+   GLOBAL RESET & BODY BACKGROUND
+   (Dashboard / Compose / Sent / Scheduled pages)
+──────────────────────────────────────────────────────────────── */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;                          /* remove white rim           */
+  color: #111;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f3f6fb;                /* neutral light backdrop     */
+}
+
+/* ──────────────────────────────────────────────────────────────
+   APP SHELL LAYOUT
+──────────────────────────────────────────────────────────────── */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;                   /* page scroll bar disabled   */
+}
+
+.page-content {
+  flex: 1;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-y: auto;                   /* internal scroll only       */
+  scrollbar-gutter: stable;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   OPTIONAL – glassy stat cards
+──────────────────────────────────────────────────────────────── */
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.stat-card p {
+  margin: 4px 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+}

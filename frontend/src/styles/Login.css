@@ -1,0 +1,115 @@
+/* ──────────────────────────────────────────────────────────────
+   FULL-SCREEN GRADIENT BACKGROUND (only on /login)
+──────────────────────────────────────────────────────────────── */
+.login-hero {
+  position: fixed;                    /* fill viewport, no scroll   */
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 25% 25%, #4061ff 0%, #243a86 40%, #151735 70%)
+      fixed,
+    radial-gradient(circle at 90% 10%, #19c0da 0%, transparent 55%) fixed,
+    #0e111e;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #ffffff;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   BRAND (logo + text)
+──────────────────────────────────────────────────────────────── */
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 48px;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand-sub {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   GLASS PANEL
+──────────────────────────────────────────────────────────────── */
+.glass-panel {
+  width: 520px;
+  max-width: 90vw;
+  padding: 50px 46px 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(28px) saturate(180%);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.22),
+    0 25px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.glass-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.glass-panel input {
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(5, 15, 40, 0.35);
+  color: #e6ebff;
+  font-size: 18px;
+  transition: border 0.25s, background 0.25s;
+}
+
+.glass-panel input::placeholder {
+  color: #bcc4e8;
+}
+
+.glass-panel input:focus {
+  outline: none;
+  border-color: #7aa5ff;
+  background: rgba(5, 15, 40, 0.5);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   CTA BUTTON
+──────────────────────────────────────────────────────────────── */
+.glass-panel button {
+  margin-top: 6px;
+  padding: 16px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(90deg, #3f54ff 0%, #3b7cff 50%, #19c0da 100%);
+  box-shadow: 0 6px 18px rgba(25, 128, 255, 0.35);
+  transition: transform 0.12s, box-shadow 0.22s;
+}
+
+.glass-panel button:hover {
+  box-shadow: 0 8px 22px rgba(25, 128, 255, 0.45);
+}
+
+.glass-panel button:active {
+  transform: translateY(2px);
+}
