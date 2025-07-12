@@ -113,3 +113,15 @@ cd frontend
 npm install
 npm start
 ```
+
+### API summary
+
+| Method | Path                 | Purpose                         |
+| ------ | -------------------- | ------------------------------ |
+| `POST` | `/auth/register`     | Create user                    |
+| `POST` | `/auth/login`        | Obtain JWT access token        |
+| `GET`  | `/auth/me`           | Validate token / fetch profile |
+| `POST` | `/emails/send`       | Send or schedule e-mail        |
+| `GET`  | `/emails/sent`       | List all e-mails               |
+| `POST` | `/emails/ai-generate`| AI-generate draft              |
+
