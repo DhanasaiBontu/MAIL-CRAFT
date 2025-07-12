@@ -38,4 +38,78 @@ The system is built with a React 18 front-end and a FastAPI back-end that stores
 ---
 
 ## Repository layout
+```
+MAIL-CRAFT/
+├─ backend/
+│  ├─ __pycache__/
+│  ├─ .env
+│  ├─ ai_generator.py
+│  ├─ auth.py
+│  ├─ config.py
+│  ├─ email_sender.py
+│  ├─ email_utils.py
+│  ├─ main.py
+│  ├─ models.py
+│  ├─ requirements.txt
+│  ├─ scheduler.py
+│  └─ utils.py
+│
+├─ frontend/
+│  ├─ build/                 # created by “npm run build”
+│  ├─ node_modules/          # front-end dependencies
+│  ├─ public/
+│  │  └─ index.html
+│  ├─ src/
+│  │  ├─ components/
+│  │  │  ├─ EmailCard.js
+│  │  │  ├─ Navbar.js
+│  │  │  └─ Sidebar.js
+│  │  ├─ pages/
+│  │  │  ├─ ComposeEmail.js
+│  │  │  ├─ Dashboard.js
+│  │  │  ├─ Login.js
+│  │  │  ├─ ScheduledEmails.js
+│  │  │  └─ SentEmails.js
+│  │  ├─ styles/
+│  │  │  ├─ App.css
+│  │  │  ├─ ComposeEmail.css
+│  │  │  ├─ Dashboard.css
+│  │  │  ├─ Login.css
+│  │  │  ├─ Navbar.css
+│  │  │  ├─ ScheduledEmails.css
+│  │  │  ├─ SentEmails.css
+│  │  │  └─ Sidebar.css
+│  │  ├─ App.js
+│  │  ├─ axios.js
+│  │  └─ index.js
+│  ├─ package.json
+│  └─ package-lock.json
+│
+├─ node_modules/             # *root-level* Node deps (added during experiments)
+├─ .gitignore             
+└─ README.md         
+```
 
+
+---
+
+## Running locally
+
+### 1. Back-end
+
+```bash
+cd backend
+python -m venv .venv
+source .venv/Scripts/activate   # Linux/Mac: source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env            # edit values for Mongo URI, SMTP and JWT secret
+uvicorn main:app --reload       # API on http://127.0.0.1:8000
+# Swagger docs: http://127.0.0.1:8000/docs
+```
+### 2. Front-end  
+
+```bash
+cd frontend
+npm install
+npm start
+```
